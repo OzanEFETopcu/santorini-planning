@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>Santorini 17-22 Aug - candidates</name>
+<Style id="wine"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/bars.png</href></Icon></IconStyle></Style>
+<Style id="dinner"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/dining.png</href></Icon></IconStyle></Style>
+<Style id="snack"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/coffee.png</href></Icon></IconStyle></Style>
+<Style id="sail"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon></IconStyle></Style>
+<Style id="beach"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/swimming.png</href></Icon></IconStyle></Style>
+<Style id="hike"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/hiker.png</href></Icon></IconStyle></Style>
+<Style id="site"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/museum.png</href></Icon></IconStyle></Style>
+<Style id="trip"><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/shapes/ferry.png</href></Icon></IconStyle></Style>
+<Folder><name>Wine tasting</name>
+<Placemark><name>Santo Wines</name><description>Wine tasting - unverified seed idea. Search: Santo Wines Santorini</description><styleUrl>#wine</styleUrl><Point><coordinates>25.4361,36.3897,0</coordinates></Point></Placemark>
+<Placemark><name>Venetsanos</name><description>Wine tasting - unverified seed idea. Search: Venetsanos Winery Santorini</description><styleUrl>#wine</styleUrl><Point><coordinates>25.4275,36.3861,0</coordinates></Point></Placemark>
+<Placemark><name>Domaine Sigalas</name><description>Wine tasting - unverified seed idea. Search: Domaine Sigalas Santorini</description><styleUrl>#wine</styleUrl><Point><coordinates>25.4030,36.4586,0</coordinates></Point></Placemark>
+<Placemark><name>Estate Argyros</name><description>Wine tasting - unverified seed idea. Search: Estate Argyros Santorini</description><styleUrl>#wine</styleUrl><Point><coordinates>25.4560,36.4040,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Dinners</name>
+<Placemark><name>Metaxi Mas</name><description>Dinners - unverified seed idea. Search: Metaxi Mas Exo Gonia Santorini</description><styleUrl>#dinner</styleUrl><Point><coordinates>25.4519,36.4083,0</coordinates></Point></Placemark>
+<Placemark><name>Ammoudi Bay tavernas</name><description>Dinners - unverified seed idea. Search: Ammoudi Bay Santorini</description><styleUrl>#dinner</styleUrl><Point><coordinates>25.3736,36.4653,0</coordinates></Point></Placemark>
+<Placemark><name>To Psaraki</name><description>Dinners - unverified seed idea. Search: To Psaraki Vlychada Santorini</description><styleUrl>#dinner</styleUrl><Point><coordinates>25.4297,36.3436,0</coordinates></Point></Placemark>
+<Placemark><name>The sunset dinner</name><description>Dinners - unverified seed idea. Search: Imerovigli Santorini</description><styleUrl>#dinner</styleUrl><Point><coordinates>25.4230,36.4325,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Snacks &amp; coffee</name>
+<Placemark><name>Gyros in Fira</name><description>Snacks &amp; coffee - unverified seed idea. Search: Fira Santorini</description><styleUrl>#snack</styleUrl><Point><coordinates>25.4322,36.4167,0</coordinates></Point></Placemark>
+<Placemark><name>Bakery breakfast</name><description>Snacks &amp; coffee - unverified seed idea. Search: Pyrgos Kallistis Santorini</description><styleUrl>#snack</styleUrl><Point><coordinates>25.4436,36.3919,0</coordinates></Point></Placemark>
+<Placemark><name>Beach-bar afternoon</name><description>Snacks &amp; coffee - unverified seed idea. Search: Perivolos Beach Santorini</description><styleUrl>#snack</styleUrl><Point><coordinates>25.4569,36.3486,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Sailing</name>
+<Placemark><name>Catamaran day cruise</name><description>Sailing - unverified seed idea. Search: Vlychada Marina Santorini</description><styleUrl>#sail</styleUrl><Point><coordinates>25.4325,36.3403,0</coordinates></Point></Placemark>
+<Placemark><name>Volcano &amp; hot springs boat</name><description>Sailing - unverified seed idea. Search: Nea Kameni</description><styleUrl>#sail</styleUrl><Point><coordinates>25.3961,36.4042,0</coordinates></Point></Placemark>
+<Placemark><name>Small-group sailboat</name><description>Sailing - unverified seed idea. Search: Ammoudi Port Santorini</description><styleUrl>#sail</styleUrl><Point><coordinates>25.3742,36.4645,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Beaches</name>
+<Placemark><name>Perissa / Perivolos</name><description>Beaches - unverified seed idea. Search: Perissa Beach Santorini</description><styleUrl>#beach</styleUrl><Point><coordinates>25.4664,36.3556,0</coordinates></Point></Placemark>
+<Placemark><name>Vlychada beach</name><description>Beaches - unverified seed idea. Search: Vlychada Beach Santorini</description><styleUrl>#beach</styleUrl><Point><coordinates>25.4258,36.3389,0</coordinates></Point></Placemark>
+<Placemark><name>Kamari</name><description>Beaches - unverified seed idea. Search: Kamari Beach Santorini</description><styleUrl>#beach</styleUrl><Point><coordinates>25.4744,36.3769,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Hiking &amp; walks</name>
+<Placemark><name>Fira → Imerovigli → Oia path</name><description>Hiking &amp; walks - unverified seed idea. Search: Fira to Oia hiking trail Santorini</description><styleUrl>#hike</styleUrl><Point><coordinates>25.4100,36.4400,0</coordinates></Point></Placemark>
+<Placemark><name>Ancient Thera climb</name><description>Hiking &amp; walks - unverified seed idea. Search: Ancient Thera</description><styleUrl>#hike</styleUrl><Point><coordinates>25.4747,36.3625,0</coordinates></Point></Placemark>
+<Placemark><name>Vlychada cliffs walk</name><description>Hiking &amp; walks - unverified seed idea. Search: Vlychada Beach cliffs Santorini</description><styleUrl>#hike</styleUrl><Point><coordinates>25.4200,36.3392,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Sites &amp; indoor</name>
+<Placemark><name>Akrotiri excavation</name><description>Sites &amp; indoor - unverified seed idea. Search: Akrotiri Archaeological Site Santorini</description><styleUrl>#site</styleUrl><Point><coordinates>25.4033,36.3517,0</coordinates></Point></Placemark>
+<Placemark><name>Museum of Prehistoric Thira</name><description>Sites &amp; indoor - unverified seed idea. Search: Museum of Prehistoric Thera</description><styleUrl>#site</styleUrl><Point><coordinates>25.4317,36.4147,0</coordinates></Point></Placemark>
+<Placemark><name>Tomato Industrial Museum</name><description>Sites &amp; indoor - unverified seed idea. Search: Tomato Industrial Museum Vlychada</description><styleUrl>#site</styleUrl><Point><coordinates>25.4283,36.3417,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Day trips</name>
+<Placemark><name>Thirasia</name><description>Day trips - unverified seed idea. Search: Thirasia</description><styleUrl>#trip</styleUrl><Point><coordinates>25.3336,36.4319,0</coordinates></Point></Placemark>
+<Placemark><name>Ios (off the map)</name><description>Day trips - unverified seed idea. Search: Ios Greece</description><styleUrl>#trip</styleUrl><Point><coordinates>25.3300,36.4800,0</coordinates></Point></Placemark>
+<Placemark><name>Naxos (off the map)</name><description>Day trips - unverified seed idea. Search: Naxos Greece</description><styleUrl>#trip</styleUrl><Point><coordinates>25.3430,36.4830,0</coordinates></Point></Placemark>
+</Folder>
+</Document></kml>
