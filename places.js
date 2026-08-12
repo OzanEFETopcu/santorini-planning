@@ -6,7 +6,7 @@
    One entry per place:
      name   required   what you'll recognise it by
      cat    required   one of the keys in CATS below (wine, dinner, snack,
-                       brekky, beach, bar, site, hike, sail, stay). This order is also the
+                       brekky, beach, bar, site, hike, sail, horse, stay). This order is also the
                        order sections appear in the app — rearrange it to reorder them.
      lat/lon required   decimal degrees. Right-click a spot in Google Maps and
                        the first menu item is "lat, lon" — paste it here.
@@ -36,6 +36,7 @@ const CATS = {
   site:   { label: 'Sites & indoor',  color: '#6C6497', shape: 'square'   },
   hike:   { label: 'Hiking & walks',  color: '#4E7C3F', shape: 'diamond'  },
   sail:   { label: 'Sailing',         color: '#3D6B87', shape: 'triangle' },
+  horse:  { label: 'Horseback riding', color: '#5B4A8A', shape: 'cross'    },
   stay:   { label: 'Where to stay',   color: '#54606B', shape: 'star'     },
 };
 
@@ -184,20 +185,31 @@ const PLACES = [
     note: 'Proper espresso, banana bread and cinnamon rolls. Sits right by the walking path — takeaway or sit down.',
     verdict: 'The coffee stop for the rim walk: it is on the Fira → Oia path, at the Imerovigli halfway point.' },
 
-  // ---- sailing ----
-  { name: 'Catamaran day cruise', cat: 'sail', img: 'img/catamaran-day-cruise.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Dietmar Rabich', lat: 36.3403, lon: 25.4325, area: 'Vlychada marina',
-    note: 'Half-day along the south coast — Red and White beaches, hot springs.' },
-  { name: 'Volcano & hot springs boat', cat: 'sail', img: 'img/volcano-hot-springs-boat.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Bernard Gagnon', lat: 36.4042, lon: 25.3961, area: 'Nea Kameni',
-    note: 'Shorter and cheaper. The crater walk has no shade at all.' },
-  { name: 'Small-group sailboat', cat: 'sail', img: 'img/small-group-sailboat.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Moonik', lat: 36.4645, lon: 25.3742, area: 'Ammoudi port',
-    note: 'Fewer people than the catamarans, costs more.', status: 'maybe' },
-
   { name: 'Lotza', cat: 'snack', img: 'img/lotza.jpg', imgKind: 'area', imgFrom: 'area photo · santorinidave.com', also: ['brekky'], type: 'cafe with a caldera view', group: 'The north end — 25–30 min each way',
     lat: 36.4614, lon: 25.3743, area: 'Oia, Nomikou walkway', rank: 5,
     price: 'breakfast good value · lunch and dinner €25–30pp · €7 for a small cappuccino',
     url: 'https://santorinidave.com/santorini-restaurant-lotza',
     note: 'Shaded patio over the caldera on the Oia walkway, open from breakfast onwards. Big portions, fast service. 4.1 across 4,077 reviews. Cliff-side tables go early.',
     verdict: 'The Oia breakfast with the view — and the cheapest way to sit on that cliff, as long as you ignore the coffee price.' },
+
+  // ---- sailing · by departure port, nearest the base first ----
+  { name: 'Semi-private catamaran from Vlychada', cat: 'sail', img: 'img/semi-private-catamaran-from-vlychada.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'catamaran, 5 hours', group: 'Short drive — 15 min or less',
+    lat: 36.3400, lon: 25.4275, area: 'Vlychada marina', rank: 1,
+    price: '€85–150 per person', dur: '5 hours; day or sunset departure',
+    url: 'https://www.manawa.com/en-GB/activity/greece/santorini/boat-tours/semi-private-catamaran-cruise-around-santorini-from-vlychada-port/24993',
+    note: 'Red, White and Black beaches, the Black Mountain coves for swimming and snorkelling, under the Akrotiri lighthouse, then the hot springs. Barbecue lunch, salad, fruit and drinks included.',
+    verdict: 'Ten minutes from the base and it covers Red and White beaches without the closed cliff path. The sunset version runs the same route in reverse.' },
+  { name: 'Volcano & hot springs boat', cat: 'sail', img: 'img/volcano-hot-springs-boat.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'traditional boat, half day', group: 'Short drive — 15 min or less',
+    lat: 36.4182, lon: 25.4281, area: 'Fira Old Port', rank: 2,
+    price: '≈€32–36 plus €5 crater entry', dur: 'about 6 hours, 1.5 h on the crater',
+    url: 'https://www.getyourguide.com/santorini-volcano-l9788/',
+    note: 'Boat to Nea Kameni for the crater walk, then Palea Kameni for the sulphur hot springs — you swim 30–50 m from the boat to reach them.',
+    verdict: 'By far the cheapest way onto the volcano. No shade on the crater, so not a midday plan.' },
+  { name: 'Sunset catamaran from Ammoudi', cat: 'sail', img: 'img/sunset-catamaran-from-ammoudi.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Trish Hartmann from Tampa, Florida, US', type: 'catamaran, 5 hours', group: 'The north end — 25–30 min each way',
+    lat: 36.4648, lon: 25.3706, area: 'Ammoudi Bay', rank: 3,
+    price: '€85–150 per person', dur: '5 hours, finishing at sunset',
+    note: 'The same caldera route run from the north: Ammoudi across the caldera and down the south coast.',
+    verdict: 'Only worth the 30-minute drive if you are already spending that day in Oia — otherwise take the Vlychada boat.', status: 'maybe' },
 
   // ---- beaches · natural beaches only; beach clubs live under Bars & clubs ----
   { name: 'Perissa / Perivolos', cat: 'beach', img: 'img/perissa-perivolos.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'beach',
@@ -281,13 +293,35 @@ const PLACES = [
     note: 'Also listed as Marykay\'s. Cocktails, DJs and actual dancing in a rustic room off the main street. 4.5 across 438 reviews.',
     verdict: 'Widely called the only real bar in Oia — the one place up there that is not a sunset terrace.' },
 
-  // ---- hiking ----
-  { name: 'Fira → Imerovigli → Oia path', cat: 'hike', img: 'img/fira-imerovigli-oia-path.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Bernard Gagnon', lat: 36.4400, lon: 25.4100, area: 'caldera rim',
-    note: 'The classic rim path, roughly 10 km. Early morning in August, or not at all.' },
-  { name: 'Ancient Thera climb', cat: 'hike', img: 'img/ancient-thera-climb.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Norbert Nagel', lat: 36.3625, lon: 25.4747, area: 'Mesa Vouno',
-    note: 'Steep path up from Kamari — the site plus a view over both coasts.' },
-  { name: 'Vlychada cliffs walk', cat: 'hike', img: 'img/vlychada-cliffs-walk.jpg', imgKind: 'satellite', imgFrom: 'satellite view', lat: 36.3392, lon: 25.4200, area: 'south coast',
-    note: 'Short and flat. Check Red Beach access — rockfall closures happen.' },
+  // ---- hiking · Santorini's official numbered trails, grouped by distance ----
+  { name: 'Trail 06 — Megalochori to Pyrgos', cat: 'hike', img: 'img/trail-06-megalochori-to-pyrgos.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · ArticCynda', type: 'official trail, 2.5 km', group: 'Walk from the base',
+    lat: 36.3798, lon: 25.4379, area: 'from your village', rank: 1,
+    price: 'free', dur: '2.5 km one way, roughly 45 min',
+    note: 'Signposted island trail from Megalochori up to Pyrgos, through vineyards and old field walls.',
+    verdict: 'Walk out of the door and arrive at Brusco, Penelope\'s and Franco\'s — the one hike that removes the car from an evening.' },
+  { name: 'Trail 07 — Megalochori to Plaka', cat: 'hike', img: 'img/trail-07-megalochori-to-plaka.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'official trail, 1.3 km', group: 'Walk from the base',
+    lat: 36.3766, lon: 25.4265, area: 'from your village', rank: 2,
+    price: 'free', dur: '1.3 km, about 25 min',
+    note: 'The short one, heading down the western side of the village.',
+    verdict: 'A stretch of the legs before dinner rather than a hike.' },
+  { name: 'Trail 03 — Perissa to Ancient Thera to Kamari', cat: 'hike', img: 'img/trail-03-perissa-to-ancient-thera-to-kamari.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Sidvics', type: 'official trail, 3 km + ruins', group: 'Short drive — 15 min or less',
+    lat: 36.3671, lon: 25.4762, area: 'Mesa Vouno', rank: 3,
+    price: 'site entry €10 (sources vary €4–10)',
+    dur: 'Ancient Thera open daily except WEDNESDAY, 08:30–15:30. Kamari ascent 1.6 km, about 1 h; full Perissa–Thera–Kamari loop 4–4.5 h',
+    url: 'https://santorinidave.com/santorini-ancient-thera',
+    note: 'Zigzag cobbled climb up Mesa Vouno to the clifftop ruins, with both coasts below. Steep, no shade, and the site closes at 15:30.',
+    verdict: 'Do the Kamari side up and down unless you want a four-hour day. Go early — and never on a Wednesday.' },
+  { name: 'Trail 13 — Akrotiri to Vlychada beach', cat: 'hike', img: 'img/vlychada-cliffs-walk.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Dietmar Rabich', type: 'official trail, 1 km', group: 'Short drive — 15 min or less',
+    lat: 36.3524, lon: 25.4162, area: 'south coast', rank: 4,
+    price: 'free', dur: '1 km, flat, about 20 min',
+    note: 'Short coastal walk under the white ash cliffs into Vlychada beach.',
+    verdict: 'Pairs with a Vlychada beach day or Theros — not a hike in its own right.' },
+  { name: 'Fira → Imerovigli → Oia rim path', cat: 'hike', img: 'img/fira-imerovigli-oia-rim-path.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Zde', type: 'the classic, 10.5 km', group: 'The north end — 25–30 min each way',
+    lat: 36.4326, lon: 25.4228, area: 'caldera rim (Trail 09)', rank: 5,
+    price: 'free', dur: '10.5 km, 2.5–5 h with stops. In August start 06:00–08:00',
+    url: 'https://santorinidave.com/fira-oia-hike',
+    note: 'Paved as far as Imerovigli, then 4 km of rocky, fully exposed ground to Oia. Moderate, with steep sections and no shade on the second half. Carry all your water.',
+    verdict: 'The best walk on the island and the one most likely to break you in August — early morning or not at all. Brown\'s Espresso Bar sits at the Imerovigli halfway point.' },
 
   // ---- sites & indoor · ranked ----
   { name: 'Symposion by La Ponta', cat: 'site', img: 'img/symposion-by-la-ponta.jpg', imgKind: 'venue', imgFrom: 'symposionsantorini.com', type: 'arts, music & wine venue', lat: 36.3770, lon: 25.4325,
@@ -312,6 +346,20 @@ const PLACES = [
     url: 'https://matiartgallery.com/location/mati-fira/',
     note: 'Kypris\'s contemporary sculpture — the Frozen Fish, Shipwrecks and Cages & Flights series — plus etchings and jewellery. "Mati" means eye.',
     verdict: 'Open until 23:00 in August, in the same courtyard as Ouzeri. A walk-in after dinner, not a plan.' },
+
+  // ---- horseback riding ----
+  { name: 'Santorini Horse Riding', cat: 'horse', img: 'img/santorini-horse-riding.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Alerove', type: 'stables, 45 horses', group: 'Walk from the base',
+    lat: 36.3770, lon: 25.4300, area: 'Megalochori', rank: 1,
+    price: 'from €20 (1 h) · beach ride €80 · ride with dinner €135',
+    dur: 'sunset rides are the ones people rate; book ahead',
+    url: 'https://santorini-horse-riding.com/about-us/',
+    note: 'Family stables in your own village, five generations and 45 horses. Rides to the black sand beach, vineyard routes, sunset and private options. Basic training given to beginners. Children 7+ ride alone, 4–6 share with a parent.',
+    verdict: 'In Megalochori, so it costs you no driving at all. The €80 beach ride at sunset is the one worth the money.' },
+  { name: 'Akrotiri Horse Riding', cat: 'horse', img: 'img/akrotiri-horse-riding.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · SANTORINI2017', type: 'stables', group: 'Short drive — 15 min or less',
+    lat: 36.3546, lon: 25.4052, area: 'Akrotiri', rank: 2,
+    dur: 'prices not published — call to ask',
+    note: 'The other mapped stables on the island, out on the Akrotiri side near the excavation and the red cliffs.',
+    verdict: 'Only worth it if you want the Akrotiri side specifically. Ring first, nothing is published.', status: 'maybe' },
 
   // ---- where to stay ----
   { name: 'Our Airbnb', cat: 'stay', img: 'img/base-megalochori.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'base',
