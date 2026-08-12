@@ -913,6 +913,7 @@
     else if (shape === 'pentagon') body = '<polygon points="' + ngon(5, r - sw / 2, -Math.PI / 2) + '" ' + common + ' />';
     else if (shape === 'hexagon') body = '<polygon points="' + ngon(6, r - sw / 2, -Math.PI / 2) + '" ' + common + ' />';
     else if (shape === 'octagon') body = '<polygon points="' + ngon(8, r - sw / 2, -Math.PI / 8) + '" ' + common + ' />';
+    else if (shape === 'tri-down') body = '<polygon points="' + ngon(3, r - sw / 2, Math.PI / 2) + '" ' + common + ' />';
     else body = '<polygon points="' + star(r - sw / 2) + '" ' + common + ' />';
     return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '">' + body + '</svg>';
   }
