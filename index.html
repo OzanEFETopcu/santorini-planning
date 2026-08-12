@@ -925,6 +925,22 @@
     return (a.rank == null ? 99 : a.rank) - (b.rank == null ? 99 : b.rank);
   }
 
+  // Group order follows first appearance by rank, then rank inside each group. A place
+  // cross-listed from another section keeps its own rank, so sorting on rank alone can
+  // split a group in two — this keeps each sub-heading contiguous.
+  function sorted(list) {
+    var byR = list.slice().sort(byRank);
+    var order = [];
+    byR.forEach(function (p) {
+      var g = p.group || '';
+      if (order.indexOf(g) === -1) order.push(g);
+    });
+    return byR.sort(function (a, b) {
+      var d = order.indexOf(a.group || '') - order.indexOf(b.group || '');
+      return d !== 0 ? d : byRank(a, b);
+    });
+  }
+
   function gmaps(p) {
     return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.q || (p.name + ' Santorini'));
   }
@@ -1061,7 +1077,7 @@
     var wrap = document.getElementById('sidelist');
     wrap.innerHTML = '';
     Object.keys(CATS).forEach(function (k) {
-      var items = vis.filter(function (p) { return inCat(p, k); }).sort(byRank);
+      var items = sorted(vis.filter(function (p) { return inCat(p, k); }));
       if (!items.length) return;
       var h = document.createElement('p');
       h.className = 'side-h';
@@ -1088,7 +1104,7 @@
     var wrap = document.getElementById('ideas-groups');
     wrap.innerHTML = '';
     Object.keys(CATS).forEach(function (k) {
-      var items = PLACES.filter(function (p) { return inCat(p, k); }).sort(byRank);
+      var items = sorted(PLACES.filter(function (p) { return inCat(p, k); }));
       if (!items.length) return;
       var d = document.createElement('details');
       var picks = items.filter(function (p) { return p.status === 'pick'; }).length;

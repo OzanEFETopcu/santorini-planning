@@ -162,7 +162,7 @@ const PLACES = [
     dur: 'reservations recommended, especially for a table with a view',
     url: 'https://www.tripadvisor.com/Restaurant_Review-g482942-d24000433-Reviews-Tholoto_Brunch_Restaurant-Fira_Santorini_Cyclades_South_Aegean.html',
     note: 'Greek and Mediterranean cooking from local produce, brunch through dinner. 4.9 over 6,571 reviews and a 2024 Travellers Choice award. Several reviews call it pricey for the area.',
-    verdict: 'The only breakfast on the list so far, and it doubles as a dinner — it shows up in both sections.' },
+    verdict: 'The polished option: brunch through dinner, so it covers a late start or an evening. Priciest of the three breakfasts.' },
 
   // ---- snacks, coffee & quick bites · grouped by distance from the base ----
   { name: 'Brusco Wine Coffee Deli', cat: 'snack', img: 'img/brusco-wine-coffee-deli.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Edal Anton Lefterov', also: ['brekky'], type: 'wine, coffee & deli', group: 'Close to the base — 15 min or less',
