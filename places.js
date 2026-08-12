@@ -47,7 +47,7 @@ const PLACES = [
     url: 'https://www.gavalaswines.gr/',
     note: 'Five generations and roughly three centuries of winemaking, 11 wines and about 90,000 bottles a year. The only winery on the island vinifying the rare Katsano and Voudomato grapes.',
     verdict: 'In your own village — the one tasting you can walk to and from, which means nobody has to stay sober. Ring ahead, prices are not posted.' },
-  { name: 'Artemis Karamolegos', cat: 'wine', img: 'img/artemis-karamolegos.webp', imgKind: 'venue', imgFrom: 'artemiskaramolegos-winery.com', group: 'Short drive — 15 min or less', lat: 36.4064, lon: 25.4537, area: 'Exo Gonia', rank: 2,
+  { name: 'Artemis Karamolegos', cat: 'wine', img: 'img/artemis-karamolegos.webp', imgKind: 'venue', imgFrom: 'artemiskaramolegos-winery.com', group: 'Short drive — 15 min or less', lat: 36.3883, lon: 25.4636, area: 'Exo Gonia', rank: 2,
     price: '€8–20 tastings · €65–140 with food', dur: 'hourly tours 12:00–18:00, open 11–20 daily',
     url: 'https://www.artemiskaramolegos-winery.com/en/tasting-room/wine-tasting/',
     note: 'Tiered flights: 3 wines €8, 4 for €11, 5 for €14, 5 PDO for €15, 7 for €20. Sea-view courtyard, own restaurant.',
@@ -96,7 +96,7 @@ const PLACES = [
     verdict: 'Last for the wine, first if the goal is sunset — book a front table or do not bother.' },
 
   // ---- dinners · sit-down meals, ranked ----
-  { name: 'Metaxi Mas', cat: 'dinner', img: 'img/metaxi-mas.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · C messier', type: 'taverna', group: 'Close to the base — 15 min or less', lat: 36.4083, lon: 25.4519, area: 'Exo Gonia', rank: 1,
+  { name: 'Metaxi Mas', cat: 'dinner', img: 'img/metaxi-mas.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · C messier', type: 'taverna', group: 'Close to the base — 15 min or less', lat: 36.3880, lon: 25.4579, area: 'Exo Gonia', rank: 1,
     note: 'The island favourite. Inland, no caldera view, and it books out well ahead.',
     verdict: 'Best-loved proper dinner on the island — reserve now or lose it.' },
   { name: 'Pentozali', cat: 'dinner', img: 'img/pentozali.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · C messier', type: 'mezedopoleio', group: 'Close to the base — 15 min or less', lat: 36.3999, lon: 25.4478, area: 'Mesaria', rank: 4,
@@ -118,11 +118,11 @@ const PLACES = [
     url: 'https://www.tripadvisor.com/Restaurant_Review-g482942-d1103026-Reviews-Ouzeri-Fira_Santorini_Cyclades_South_Aegean.html',
     note: 'Open since 2003, chef trained at Cordon Bleu. Sharing plates, grilled meat and seafood, moderate prices for Fira.',
     verdict: 'The in-town dinner: no driving, shared plates, reliably good value.' },
-  { name: 'To Psaraki', cat: 'dinner', img: 'img/to-psaraki.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · ArticCynda', type: 'fish taverna', group: 'Close to the base — 15 min or less', lat: 36.3436, lon: 25.4297, area: 'Vlychada', rank: 5,
+  { name: 'To Psaraki', cat: 'dinner', img: 'img/to-psaraki.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · ArticCynda', type: 'fish taverna', group: 'Close to the base — 15 min or less', lat: 36.3395, lon: 25.4310, area: 'Vlychada', rank: 5,
     note: 'Above the marina on the south coast.',
     verdict: 'Well regarded, but I have not verified prices or hours yet.' },
   { name: "Penelope's Ouzeri", cat: 'dinner', img: 'img/penelope-s-ouzeri.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Bernard Gagnon', type: 'mezedopoleio', group: 'Close to the base — 15 min or less',
-    lat: 36.3919, lon: 25.4430, area: 'Pyrgos', rank: 2,
+    lat: 36.3826, lon: 25.4502, area: 'Pyrgos', rank: 2,
     url: 'https://www.tripadvisor.com/Restaurant_Review-g1097549-d2327988-Reviews-Penelope_s_Ouzeri_Pyrgos_Santorini-Pyrgos_Santorini_Cyclades_South_Aegean.html',
     note: 'Family-run in the centre of Pyrgos, looking over the village. Traditional mezedes with a modern turn — fava, tomatokeftedes, and the octopus reviewers keep naming.',
     verdict: 'Six minutes from your door and the sunset comes free with the view. Different place from Ouzeri in Fira.' },
@@ -132,7 +132,7 @@ const PLACES = [
     note: 'The Cave of Nikolas: a boat shelter dug into the rock that turned taverna in 1967. Vegetables, cheese and meat from their own farm, fish landed that day. Famous for tomatokeftedes, meatless moussaka with white aubergine, grilled calamari. Gourmet award for best traditional taverna 2007–08.',
     verdict: 'Ten minutes away, on the water, and the produce is genuinely theirs — the best-value serious dinner near the base.' },
   { name: 'Krinaki', cat: 'dinner', img: 'img/krinaki.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · bynyalcin', type: 'farm-to-table taverna', group: 'The north end — 25–30 min each way',
-    lat: 36.4586, lon: 25.3831, area: 'Finikia, next to Oia', rank: 10,
+    lat: 36.4632, lon: 25.3939, area: 'Finikia, next to Oia', rank: 10,
     price: '€30–40 per person with wine',
     url: 'https://www.tripadvisor.com/Restaurant_Review-g10521928-d1812490-Reviews-Krinaki-Finikia_Santorini_Cyclades_South_Aegean.html',
     note: 'Raised terrace over the lanes of Finikia. The owner sources from village growers, so specials appear when someone turns up with good produce. 4.9 across 1,800 reviews.',
@@ -164,16 +164,22 @@ const PLACES = [
     note: 'Greek and Mediterranean cooking from local produce, brunch through dinner. 4.9 over 6,571 reviews and a 2024 Travellers Choice award. Several reviews call it pricey for the area.',
     verdict: 'The only breakfast on the list so far, and it doubles as a dinner — it shows up in both sections.' },
 
-  // ---- snacks & quick bites · ranked ----
-  { name: 'Falafeland', cat: 'snack', img: 'img/falafeland.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'falafel counter', lat: 36.4172, lon: 25.4306, area: 'Fira', rank: 1,
+  // ---- snacks, coffee & quick bites · grouped by distance from the base ----
+  { name: 'Brusco Wine Coffee Deli', cat: 'snack', img: 'img/brusco-wine-coffee-deli.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Edal Anton Lefterov', also: ['brekky'], type: 'wine, coffee & deli', group: 'Close to the base — 15 min or less',
+    lat: 36.3828, lon: 25.4497, area: 'Pyrgos square', rank: 1,
+    price: 'platters €13–16',
+    url: 'https://www.tripadvisor.com/Restaurant_Review-g1097549-d6885554-Reviews-Brusco_Wine_Coffee_Deli-Pyrgos_Santorini_Cyclades_South_Aegean.html',
+    note: 'Tables in the shaded village square. Coffee, pancakes and breakfast, local delicacies and small plates with Santorini wine by the glass. Vegetarian and vegan options. 4.6 across 466 reviews.',
+    verdict: 'Six minutes away and cheaper than anything in Fira or Oia — the default morning stop, and it doubles as a wine snack in the evening.' },
+  { name: 'Falafeland', cat: 'snack', img: 'img/falafeland.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'falafel counter', group: 'Close to the base — 15 min or less', lat: 36.4181, lon: 25.4336, area: 'Fira', rank: 2,
     price: '≈€3 a wrap', url: 'https://falafeland.gr/',
     note: 'Vegan street food in the middle of Fira. Wraps, homemade mayo, gluten-free options, vegan brownie.',
     verdict: 'Cheapest edible thing in Fira and genuinely good — the default hot-afternoon lunch.' },
-  { name: 'Golden Grill House', cat: 'snack', img: 'img/golden-grill-house.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · C messier', type: 'charcoal grill', lat: 36.4030, lon: 25.4450, area: 'Fira–Perissa road', rank: 2,
+  { name: 'Golden Grill House', cat: 'snack', img: 'img/golden-grill-house.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · C messier', type: 'charcoal grill', group: 'Close to the base — 15 min or less', lat: 36.4030, lon: 25.4450, area: 'Fira–Perissa road', rank: 3,
     price: 'gyros ≈€4.50',
     note: 'Charcoal grill, generous portions, sea view from the terrace, mostly locals. Seftalia is the thing to order.',
     verdict: 'Best cheap grill, but it is on the ring road — needs wheels or a bus.' },
-  { name: "Brown's Espresso Bar", cat: 'snack', img: 'img/brown-s-espresso-bar.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Zde', type: 'espresso bar', lat: 36.4330, lon: 25.4243, area: 'Imerovigli', rank: 3,
+  { name: "Brown's Espresso Bar", cat: 'snack', img: 'img/brown-s-espresso-bar.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Zde', type: 'espresso bar', group: 'The north end — 25–30 min each way', lat: 36.4330, lon: 25.4243, area: 'Imerovigli', rank: 4,
     url: 'https://mindtrip.ai/restaurant/imerovigli-south-aegean/browns-espresso-bar/re-Sl5MGtIS',
     note: 'Proper espresso, banana bread and cinnamon rolls. Sits right by the walking path — takeaway or sit down.',
     verdict: 'The coffee stop for the rim walk: it is on the Fira → Oia path, at the Imerovigli halfway point.' },
@@ -185,6 +191,13 @@ const PLACES = [
     note: 'Shorter and cheaper. The crater walk has no shade at all.' },
   { name: 'Small-group sailboat', cat: 'sail', img: 'img/small-group-sailboat.jpg', imgKind: 'photo', imgFrom: 'Wikimedia · Moonik', lat: 36.4645, lon: 25.3742, area: 'Ammoudi port',
     note: 'Fewer people than the catamarans, costs more.', status: 'maybe' },
+
+  { name: 'Lotza', cat: 'snack', img: 'img/lotza.jpg', imgKind: 'area', imgFrom: 'area photo · santorinidave.com', also: ['brekky'], type: 'cafe with a caldera view', group: 'The north end — 25–30 min each way',
+    lat: 36.4614, lon: 25.3743, area: 'Oia, Nomikou walkway', rank: 5,
+    price: 'breakfast good value · lunch and dinner €25–30pp · €7 for a small cappuccino',
+    url: 'https://santorinidave.com/santorini-restaurant-lotza',
+    note: 'Shaded patio over the caldera on the Oia walkway, open from breakfast onwards. Big portions, fast service. 4.1 across 4,077 reviews. Cliff-side tables go early.',
+    verdict: 'The Oia breakfast with the view — and the cheapest way to sit on that cliff, as long as you ignore the coffee price.' },
 
   // ---- beaches · natural beaches only; beach clubs live under Bars & clubs ----
   { name: 'Perissa / Perivolos', cat: 'beach', img: 'img/perissa-perivolos.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'beach',
@@ -243,7 +256,7 @@ const PLACES = [
     note: 'Sunbeds and cabanas on the black sand, towels, showers, changing rooms, Mediterranean food, a boutique, and local and international DJs playing house and deep house that builds through the afternoon.',
     verdict: 'A day club, not a night club — the party peaks late afternoon and it winds down around 21:00–22:00. Prices quoted vary wildly by source; confirm what €20 actually buys before you sit down.' },
   { name: "Franco's Cafe", cat: 'bar', img: 'img/franco-s-cafe.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Klearchos Kapoutsis from Santorini, Gr', type: 'sunset cocktail terrace',
-    lat: 36.3908, lon: 25.4468, area: 'top of Pyrgos', rank: 1,
+    lat: 36.3830, lon: 25.4508, area: 'top of Pyrgos', rank: 1,
     dur: 'no vehicle access to the top — park below and walk up the lanes',
     url: 'https://www.tripadvisor.com/Restaurant_Review-g1097549-d1534236-Reviews-Franco_s_Cafe-Pyrgos_Santorini_Cyclades_South_Aegean.html',
     note: 'Terraces at the highest point of Pyrgos with a 360° view of the island. Classical and opera in the evening, easy jazz in the morning, strong cocktails. Reviewers call it the sunset without the Oia crowds.',
@@ -277,7 +290,7 @@ const PLACES = [
     note: 'Short and flat. Check Red Beach access — rockfall closures happen.' },
 
   // ---- sites & indoor · ranked ----
-  { name: 'Symposion by La Ponta', cat: 'site', img: 'img/symposion-by-la-ponta.jpg', imgKind: 'venue', imgFrom: 'symposionsantorini.com', type: 'arts, music & wine venue', lat: 36.3800, lon: 25.4331,
+  { name: 'Symposion by La Ponta', cat: 'site', img: 'img/symposion-by-la-ponta.jpg', imgKind: 'venue', imgFrom: 'symposionsantorini.com', type: 'arts, music & wine venue', lat: 36.3770, lon: 25.4325,
     area: 'Megalochori', rank: 1,
     price: 'grounds free · tour €12 · workshop €20 · evening show €15',
     dur: 'Tue–Sun 10:00–19:00, closed Mondays. Tour 12:00, workshop 13:30. Odysseus Returns: Wednesdays. Booking required',
@@ -302,7 +315,7 @@ const PLACES = [
 
   // ---- where to stay ----
   { name: 'Our Airbnb', cat: 'stay', img: 'img/base-megalochori.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'base',
-    lat: 36.3803, lon: 25.4325, area: 'Megalochori', rank: 1, status: 'pick',
+    lat: 36.3764, lon: 25.4317, area: 'Megalochori', rank: 1, status: 'pick',
     note: 'Booked. Village-centre coordinates until you give me the exact address.',
     verdict: 'South-central base: Venetsanos and Symposion are in this village; Akrotiri, Vlychada and Pyrgos are ~10 minutes. Oia and Ammoudi are the long haul, ~25–30 minutes each way.' },
 ];
