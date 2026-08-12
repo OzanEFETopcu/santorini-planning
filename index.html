@@ -706,12 +706,15 @@
           <li><button type="button" class="tick" aria-pressed="false" data-i="1"><span class="box" aria-hidden="true"></span><span class="txt">Detail hiking options</span></button></li>
           <li><button type="button" class="tick" aria-pressed="false" data-i="2"><span class="box" aria-hidden="true"></span><span class="txt">Detail sailing options</span></button></li>
           <li><button type="button" class="tick" aria-pressed="false" data-i="3"><span class="box" aria-hidden="true"></span><span class="txt">Detail horseback riding options</span></button></li>
-          <li><button type="button" class="tick" aria-pressed="false" data-i="4"><span class="box" aria-hidden="true"></span><span class="txt">Detail wine tasting options</span></button></li>
-          <li><button type="button" class="tick" aria-pressed="false" data-i="5"><span class="box" aria-hidden="true"></span><span class="txt">Detail dinner options</span></button></li>
-          <li><button type="button" class="tick" aria-pressed="false" data-i="6"><span class="box" aria-hidden="true"></span><span class="txt">Detail snack &amp; coffee options</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="4" data-done="1"><span class="box" aria-hidden="true"></span><span class="txt">Detail wine tasting options</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="5" data-done="1"><span class="box" aria-hidden="true"></span><span class="txt">Detail dinner options</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="6" data-done="1"><span class="box" aria-hidden="true"></span><span class="txt">Detail snack &amp; coffee options</span></button></li>
           <li><button type="button" class="tick" aria-pressed="false" data-i="7"><span class="box" aria-hidden="true"></span><span class="txt">Detail beach club options</span></button></li>
           <li><button type="button" class="tick" aria-pressed="false" data-i="8"><span class="box" aria-hidden="true"></span><span class="txt">Detail bar / club options</span></button></li>
-          <li><button type="button" class="tick" aria-pressed="false" data-i="9"><span class="box" aria-hidden="true"></span><span class="txt">Check car rental options</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="9" data-done="1"><span class="box" aria-hidden="true"></span><span class="txt">Check car rental options</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="10"><span class="box" aria-hidden="true"></span><span class="txt">Book Symposion — Odysseus Returns, Wed 20 (only date it runs)</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="11"><span class="box" aria-hidden="true"></span><span class="txt">Reserve Metaxi Mas — it books out well ahead</span></button></li>
+          <li><button type="button" class="tick" aria-pressed="false" data-i="12"><span class="box" aria-hidden="true"></span><span class="txt">Slot the picks into Days</span></button></li>
       </ul>
       <p class="todo-foot"><span id="todo-count"></span></p>
     </div>
@@ -1177,6 +1180,9 @@
     var KEY = 'santorini-todo';
     var done = {};
     try { done = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { done = {}; }
+    ticks.forEach(function (t) {
+      if (t.dataset.done && done[t.dataset.i] === undefined) done[t.dataset.i] = true;
+    });
 
     function paint() {
       var n = 0;

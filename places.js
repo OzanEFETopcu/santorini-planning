@@ -201,6 +201,12 @@ const PLACES = [
     url: 'https://matiartgallery.com/location/mati-fira/',
     note: 'Kypris\'s contemporary sculpture — the Frozen Fish, Shipwrecks and Cages & Flights series — plus etchings and jewellery. "Mati" means eye.',
     verdict: 'Open until 23:00 in August, in the same courtyard as Ouzeri. A walk-in after dinner, not a plan.' },
+
+  // ---- where to stay ----
+  { name: 'Our Airbnb', cat: 'stay', img: 'img/base-megalochori.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'base',
+    lat: 36.3803, lon: 25.4325, area: 'Megalochori', rank: 1, status: 'pick',
+    note: 'Booked. Village-centre coordinates until you give me the exact address.',
+    verdict: 'South-central base: Venetsanos and Symposion are in this village; Akrotiri, Vlychada and Pyrgos are ~10 minutes. Oia and Ammoudi are the long haul, ~25–30 minutes each way.' },
 ];
 
 /* Fixed points — always on the map, never filtered. */
