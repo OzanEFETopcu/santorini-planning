@@ -193,22 +193,18 @@ const PLACES = [
 
   // ---- sailing · by departure port, nearest the base first ----
   { name: 'Semi-private catamaran from Vlychada', cat: 'sail', img: 'img/semi-private-catamaran-from-vlychada.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'catamaran, 5 hours', group: 'Short drive — 15 min or less',
-    lat: 36.3400, lon: 25.4275, area: 'Vlychada marina', rank: 1,
-    price: '€85–150 per person', dur: '5 hours; day or sunset departure',
-    url: 'https://www.manawa.com/en-GB/activity/greece/santorini/boat-tours/semi-private-catamaran-cruise-around-santorini-from-vlychada-port/24993',
-    note: 'Red, White and Black beaches, the Black Mountain coves for swimming and snorkelling, under the Akrotiri lighthouse, then the hot springs. Barbecue lunch, salad, fruit and drinks included.',
-    verdict: 'Ten minutes from the base and it covers Red and White beaches without the closed cliff path. The sunset version runs the same route in reverse.' },
+    lat: 36.3400, lon: 25.4275, area: 'Vlychada marina', rank: 1, status: 'maybe',
+    price: 'semi-private €100–135pp · shared from ~€70 · private charter €550–820 half day',
+    dur: '5 hours, day or sunset departure',
+    url: 'https://www.santorini-yachts.com/cruise/santorini-premium-daytime-catamaran-cruise/',
+    note: 'Red, White and Black beaches, Black Mountain coves, under the Akrotiri lighthouse, then the hot springs. BBQ, salad, fruit and drinks included. Operators departing Vlychada: Spiridakos Sailing Cruises (santorini-yachts.com, running since 1986, 11 catamarans) and Caldera Yachting. Sunset Oia Sailing (sailing-santorini.com) is the most praised but departs Ammoudi, 30 min north.',
+    verdict: 'The splurge. Only book it if you decide the money is worth it — otherwise the €5–8 Akrotiri water taxi already gets you to Red and White beaches.' },
   { name: 'Volcano & hot springs boat', cat: 'sail', img: 'img/volcano-hot-springs-boat.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Norbert Nagel', type: 'traditional boat, half day', group: 'Short drive — 15 min or less',
     lat: 36.4182, lon: 25.4281, area: 'Fira Old Port', rank: 2,
     price: '≈€32–36 plus €5 crater entry', dur: 'about 6 hours, 1.5 h on the crater',
     url: 'https://www.getyourguide.com/santorini-volcano-l9788/',
     note: 'Boat to Nea Kameni for the crater walk, then Palea Kameni for the sulphur hot springs — you swim 30–50 m from the boat to reach them.',
     verdict: 'By far the cheapest way onto the volcano. No shade on the crater, so not a midday plan.' },
-  { name: 'Sunset catamaran from Ammoudi', cat: 'sail', img: 'img/sunset-catamaran-from-ammoudi.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Trish Hartmann from Tampa, Florida, US', type: 'catamaran, 5 hours', group: 'The north end — 25–30 min each way',
-    lat: 36.4648, lon: 25.3706, area: 'Ammoudi Bay', rank: 3,
-    price: '€85–150 per person', dur: '5 hours, finishing at sunset',
-    note: 'The same caldera route run from the north: Ammoudi across the caldera and down the south coast.',
-    verdict: 'Only worth the 30-minute drive if you are already spending that day in Oia — otherwise take the Vlychada boat.', status: 'maybe' },
 
   // ---- beaches · natural beaches only; beach clubs live under Bars & clubs ----
   { name: 'Perissa / Perivolos', cat: 'beach', img: 'img/perissa-perivolos.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'beach',
