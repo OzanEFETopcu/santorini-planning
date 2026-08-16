@@ -276,6 +276,14 @@
   .slot .what em { color: var(--muted); }
 
   .slot.pinned .when { color: var(--accent); }
+  .slot.key .what { color: var(--ink); }
+  .slot.key .when { color: var(--accent); }
+  .slot.book .when { color: var(--accent); }
+  .slot.book .what::after { content: 'book'; margin-left: 9px; font-size: 9.5px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--ivory); background: var(--accent);
+    padding: 2px 6px; border-radius: 3px; vertical-align: 2px; }
+  .slot.note .what { color: var(--muted); font-style: italic; }
+  .slot.note .when { color: var(--muted); }
   .slot.pinned .what { font-family: var(--display); font-size: 17px; font-weight: 500; font-variation-settings: "opsz" 48; }
 
   /* ===== candidates ===== */
@@ -807,8 +815,19 @@
   <!-- ==================== DAYS ==================== -->
 <section role="tabpanel" id="panel-days" aria-labelledby="tab-days" tabindex="0" hidden>
 
-    <p class="intro">Six days, collapsed. Open one to see its slots — clay times are fixed, everything
-      grey-lettered is still empty.</p>
+    <p class="intro">The skeleton: fixed times, the things worth booking, and a shape for each day.
+      Blue lines are anchors — a place, a time or a closure that decides the rest of the day. Italics are
+      fillers you can still swap.</p>
+
+      <div class="note-card">
+        <p><strong>Book these now — everything else can wait.</strong></p>
+        <p><b>Symposion, Wed 20</b> — Odysseus Returns runs Wednesdays only, and Friday's show is after your flight.<br>
+        <b>Metaxi Mas, Tue 19</b> — the one restaurant everyone says books out.<br>
+        <b>Vassaltis cellar tour, Wed 16:00</b> — a single slot a day, twelve people.<br>
+        <b>Estate Argyros and Karamolegos, Tue</b> — both take online bookings.<br>
+        <b>Oia dinner, Thu 21</b> — Krinaki, Fino or a waterside table at Dimitris an hour before sunset.<br>
+        <b>Beach club</b>, if you want a front row — Theros asks for 2–3 days' notice in August.</p>
+      </div>
 
     <div class="block">
       <h2>Day by day</h2>
@@ -816,90 +835,98 @@
         <details open>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Sunday 17 August<small>Arrival — half a day</small></span>
+            <span class="sum-title">Sunday 17 August<small>Arrival · settle into Megalochori</small></span>
             <span class="sum-meta">13:30 landing</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot pinned"><span class="when">13:30</span><span class="what">Land at Thira (JTR)</span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>transfer, check in, first look at the caldera</em></span></li>
-              <li class="slot"><span class="when">Evening</span><span class="what"><em>easy first dinner near the hotel</em></span></li>
+            <li class="slot pinned"><span class="when">13:30</span><span class="what">Land at Thira (JTR)</span></li>
+            <li class="slot pinned"><span class="when">14:30</span><span class="what">Pick up the car · ~16 min to the Airbnb</span></li>
+            <li class="slot"><span class="when">Late afternoon</span><span class="what"><em>Unpack, first look at the village</em></span></li>
+            <li class="slot key"><span class="when">Sunset</span><span class="what"><b>Heart of Santorini</b> — free, in your own village</span></li>
+            <li class="slot"><span class="when">Evening</span><span class="what"><em>Dinner within walking distance — <b>Raki</b> is the obvious one</em></span></li>
+            <li class="slot note"><span class="when">Note</span><span class="what">If Anogi really is Fri–Sun only, tonight is its one slot</span></li>
             </ul>
           </div>
         </details>
-
         <details>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Monday 18 August<small>First full day</small></span>
-            <span class="sum-meta">3 slots open</span>
+            <span class="sum-title">Monday 18 August<small>South coast · the culture day that cannot happen</small></span>
+            <span class="sum-meta">Symposion & MATI closed</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot"><span class="when">Morning</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Evening</span><span class="what"><em>open</em></span></li>
+            <li class="slot"><span class="when">Morning</span><span class="what"><em>Beach on the south coast — Vlychada or Mesa Pigadia</em></span></li>
+            <li class="slot key"><span class="when">Midday</span><span class="what"><b>Akrotiri excavation</b> — roofed, the right thing to do in the heat</span></li>
+            <li class="slot key"><span class="when">Afternoon</span><span class="what"><b>Taxi boats to Red, White &amp; Black</b> from Akrotiri harbour, €5–15, every 30 min</span></li>
+            <li class="slot key"><span class="when">Sunset</span><span class="what"><b>Cape Akrotiri Lighthouse</b> — free, and empty compared with Oia</span></li>
+            <li class="slot"><span class="when">Evening</span><span class="what"><em>Dinner near the base — <b>I Spilia tou Nikola</b> is 10 min away</em></span></li>
             </ul>
           </div>
         </details>
-
         <details>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Tuesday 19 August</span>
-            <span class="sum-meta">3 slots open</span>
+            <span class="sum-title">Tuesday 19 August<small>Wine day · the Gonia loop</small></span>
+            <span class="sum-meta">3 to book</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot"><span class="when">Morning</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Evening</span><span class="what"><em>open</em></span></li>
+            <li class="slot"><span class="when">Morning</span><span class="what"><em>Slow start, breakfast in <b>Pyrgos at Brusco</b></em></span></li>
+            <li class="slot book"><span class="when">11:00–13:00</span><span class="what"><b>Canava Roussos</b> — your #1, price still unconfirmed</span></li>
+            <li class="slot book"><span class="when">13:30</span><span class="what"><b>Estate Argyros</b> · Welcome €25, 45 min — 2 km away</span></li>
+            <li class="slot book"><span class="when">Late afternoon</span><span class="what"><b>Karamolegos</b> if you still want wine — Indigenous €34, 1 h</span></li>
+            <li class="slot book"><span class="when">Evening</span><span class="what"><b>Metaxi Mas</b>, Exo Gonia — same cluster, books out well ahead</span></li>
             </ul>
           </div>
         </details>
-
         <details>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Wednesday 20 August</span>
-            <span class="sum-meta">3 slots open</span>
+            <span class="sum-title">Wednesday 20 August<small>Symposion day · the only fixed evening of the trip</small></span>
+            <span class="sum-meta">Odysseus Returns</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot"><span class="when">Morning</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Evening</span><span class="what"><em>open</em></span></li>
+            <li class="slot"><span class="when">Morning</span><span class="what"><em>Beach club morning — <b>Theros</b> at Vlychada is 10 min</em></span></li>
+            <li class="slot book"><span class="when">16:00–17:00</span><span class="what"><b>Vassaltis cellar tour</b>, €30 — one slot a day, max 12 people</span></li>
+            <li class="slot book"><span class="when">Evening</span><span class="what"><b>Symposion — Odysseus Returns</b>, €15. Only date it runs. Walkable from the Airbnb</span></li>
+            <li class="slot note"><span class="when">Note</span><span class="what">Ancient Thera is closed on Wednesdays — do not plan it today</span></li>
             </ul>
           </div>
         </details>
-
         <details>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Thursday 21 August<small>Last full day</small></span>
-            <span class="sum-meta">3 slots open</span>
+            <span class="sum-title">Thursday 21 August<small>North day · sunrise, the rim path, and Oia at night</small></span>
+            <span class="sum-meta">dawn start</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot"><span class="when">Morning</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>open</em></span></li>
-              <li class="slot"><span class="when">Evening</span><span class="what"><em>open</em></span></li>
+            <li class="slot pinned"><span class="when">06:20</span><span class="what">Drive to Oia — parking is empty at dawn</span></li>
+            <li class="slot key"><span class="when">~06:50</span><span class="what">Sunrise in Oia, no crowds</span></li>
+            <li class="slot key"><span class="when">07:15</span><span class="what"><b>Trail 09</b> Oia → Imerovigli — the hard, shadeless half first</span></li>
+            <li class="slot key"><span class="when">09:30–10:15</span><span class="what"><b>Brown's Espresso Bar</b> or <b>Galini Cafe</b>. Bail out here by bus, or walk on to Fira</span></li>
+            <li class="slot"><span class="when">Afternoon</span><span class="what"><em>Back to base, out of the heat</em></span></li>
+            <li class="slot book"><span class="when">Evening</span><span class="what">Return north for dinner — <b>Krinaki</b> in Finikia, or <b>Dimitris</b> at Ammoudi</span></li>
+            <li class="slot"><span class="when">After</span><span class="what"><em><b>Hassapiko</b> or <b>Vitrin</b> in Oia</em></span></li>
             </ul>
           </div>
         </details>
-
         <details>
           <summary>
             <span class="chev" aria-hidden="true"></span>
-            <span class="sum-title">Friday 22 August<small>Departure — the day is yours until late afternoon</small></span>
-            <span class="sum-meta">19:30 flight</span>
+            <span class="sum-title">Friday 22 August<small>Departure · the day is yours until late afternoon</small></span>
+            <span class="sum-meta">car back 17:30</span>
           </summary>
           <div class="fold">
             <ul class="slots">
-              <li class="slot"><span class="when">Morning</span><span class="what"><em>open — last swim, last coffee</em></span></li>
-              <li class="slot"><span class="when">Afternoon</span><span class="what"><em>open — bags packed before this</em></span></li>
-              <li class="slot pinned"><span class="when">≈17:00</span><span class="what">Leave for the airport</span></li>
-              <li class="slot pinned"><span class="when">19:30</span><span class="what">Fly out of Thira (JTR)</span></li>
+            <li class="slot"><span class="when">Morning</span><span class="what"><em>Last swim close to base — Vlychada, 10 min</em></span></li>
+            <li class="slot"><span class="when">Lunch</span><span class="what"><em>Something near Megalochori or Pyrgos</em></span></li>
+            <li class="slot"><span class="when">~16:30</span><span class="what"><em>Pack, leave for the airport</em></span></li>
+            <li class="slot pinned"><span class="when">17:30</span><span class="what"><b>Drop the car off</b></span></li>
+            <li class="slot pinned"><span class="when">19:30</span><span class="what"><b>Fly out of Thira (JTR)</b></span></li>
             </ul>
           </div>
         </details>
