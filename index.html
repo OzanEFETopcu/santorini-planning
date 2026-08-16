@@ -566,6 +566,7 @@
 .ptable th:nth-child(2) { text-align: right; padding-right: 22px; }
 .ptable .flag { display: block; font-size: 13px; color: var(--accent); }
 .ptable .amt { font-weight: 700; }
+.ptable .amt.unknown { font-weight: 400; color: var(--muted); font-style: italic; }
 
 .psrc { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
 .psrc.none { color: var(--accent); }
@@ -1286,7 +1287,7 @@
                (t.includes ? '<span class="inc">' + t.includes + '</span>' : '') +
                (t.note ? '<span class="flag">' + t.note + '</span>' : '') +
                '</td><td class="len">' + (t.dur || '—') + '</td>' +
-               '<td class="amt">' + t.price + '</td></tr>';
+               '<td class="amt' + (t.price ? '' : ' unknown') + '">' + (t.price || 'ask') + '</td></tr>';
       }).join('');
       d.innerHTML =
         '<h3><span class="rk-small">' + p.rank + '</span>' + p.name +
