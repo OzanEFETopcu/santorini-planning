@@ -22,7 +22,8 @@
      group  optional   sub-heading inside its category, e.g. 'Beach clubs'
      rank   optional   1 = top of its category; the app sorts by it
      verdict optional  one line on why it sits where it does in the order
-     tastings optional list of {name, dur, price, note} — feeds the Prices tab
+     tastings optional list of {name, dur, price, includes, note} — feeds the Prices tab
+     hours  optional   opening hours, only when the place itself publishes them
      priceSource optional where the prices came from and when they were checked
 
    Adding a place = one line. Nothing else needs touching.
@@ -50,10 +51,14 @@ const PLACES = [
     url: 'https://www.gavalaswines.gr/',
     priceSource: 'their own booking page (FareHarbor), checked Aug 2026',
     tastings: [
-      { name: 'Introduction to Santorini', dur: '50–60 min · 4 wines', price: '€26.21' },
-      { name: 'White Expressions of Santorini', dur: '50–60 min · 4 wines', price: '€34.60' },
-      { name: 'Explore Santorini', dur: '60–70 min', price: '€41.94' },
-      { name: 'Premium and Rare', dur: '60–75 min · rarest Greek varieties', price: '€52.42', note: 'the Katsano and Voudomato tier' },
+      { name: 'Introduction to Santorini', dur: '50–60 min', price: '€26.21',
+        includes: 'Mini tour through the basic Santorini varieties · 4 wines' },
+      { name: 'White Expressions of Santorini', dur: '50–60 min', price: '€34.60',
+        includes: '4 wines, all white — built for white wine drinkers' },
+      { name: 'Explore Santorini', dur: '60–70 min', price: '€41.94',
+        includes: 'A detailed run through Santorini\'s most important varieties' },
+      { name: 'Premium and Rare', dur: '60–75 min', price: '€52.42',
+        includes: 'The rarest Greek varieties — this is the Katsano and Voudomato tier', note: 'adults 18+' },
     ],
     note: 'Five generations and roughly three centuries of winemaking, 11 wines and about 90,000 bottles a year. The only winery on the island vinifying the rare Katsano and Voudomato grapes.',
     verdict: 'In your own village — the one tasting you can walk to and from, so nobody has to stay sober. Not cheap: €26 entry level, and Premium & Rare at €52 is where the Katsano and Voudomato live.' },
@@ -80,16 +85,20 @@ const PLACES = [
   { name: 'Vassaltis Vineyards', cat: 'wine', img: 'img/vassaltis-vineyards.jpg', imgKind: 'venue', imgFrom: 'vassaltis.com', group: 'Short drive — 15 min or less', lat: 36.4344, lon: 25.4386, area: 'Vourvoulos', rank: 5,
     price: '€40 tasting · €30 cellar tour', dur: 'cellar tour 16:00–17:00, max 12 people',
     url: 'https://vassaltis.com/best-wine-experience-in-santorini/',
+    hours: 'cellar tour runs 16:00–17:00',
     priceSource: 'vassaltis.com, checked Aug 2026',
     tastings: [
-      { name: 'Vassaltis Tasting', dur: '4 wines + 4 designed bites', price: '€40' },
-      { name: 'Cellar Tour', dur: '1 h tour + 4 wines · 16:00–17:00 · max 12', price: '€30' },
+      { name: 'Vassaltis Tasting', price: '€40',
+        includes: '4 wines, each with a bite designed for it' },
+      { name: 'Cellar Tour', dur: '1 h', price: '€30',
+        includes: 'Cellar tour then 4 wines in the tasting room · max 12 people · runs 16:00–17:00' },
     ],
     note: '€40 = 4 wines with 4 designed bites. €30 = 1h cellar tour then 4 wines. Modern, small, close to Fira.',
     verdict: 'The best actual tasting — small groups, food thought through, no bus crowds.' },
   { name: 'Domaine Sigalas', cat: 'wine', img: 'img/domaine-sigalas.jpg', imgKind: 'venue', imgFrom: 'sigalas-wine.com', group: 'The north end — 25–30 min each way', lat: 36.4713, lon: 25.3943, area: 'Baxedes, near Oia', rank: 4,
     price: 'from €12 · pairing menus €100–150', dur: 'tasting room 11:00–21:00. By bus: Fira–Oia line, off at the Perivolos Hotel stop, then ~25 min walk',
     url: 'https://sigalas-wine.com/food-pairing-en/',
+    hours: 'tasting room 11:00–21:00, Mon–Sun',
     priceSource: 'not published — they sell through AnyRoad; ring or check the widget for the day',
     note: 'Top-100 world winery listings, relaxed vineyard setting. Entry tastings are cheap; the 6-plate degustation is the splurge.',
     verdict: 'Most acclaimed wine, calm setting, and reachable without the car — bus to the Perivolos Hotel stop then walk 25 min. Pairs with an Oia or Ammoudi evening.' },
@@ -98,19 +107,25 @@ const PLACES = [
     url: 'https://estateargyros.com/',
     priceSource: 'estateargyros.com, checked Aug 2026',
     tastings: [
-      { name: 'Estate Argyros Welcome', dur: 'introductory tasting', price: '€25' },
-      { name: 'Taste the Real Santorini', dur: 'estate wines paired with regional bites', price: '€40' },
+      { name: 'Estate Argyros Welcome', dur: '45 min', price: '€25',
+        includes: 'Tour and tasting with a wine educator · walk on the volcanic soil through the oldest vineyards · 4 wines from indigenous varieties · platter of cheeses, cold cuts and local bites' },
+      { name: 'Taste the Real Santorini', dur: '1 h 15', price: '€40',
+        includes: 'Same tour and platter, stepped up · 6 wines from indigenous varieties' },
     ],
     note: 'Family estate since 1903, oldest vines on the island. Inland, no caldera view.',
     verdict: 'Oldest vines on the island and still mid-priced at €25. Inland, no view.' },
   { name: 'Hatzidakis Winery', cat: 'wine', img: 'img/hatzidakis-winery.jpg', imgKind: 'venue', imgFrom: 'hatzidakiswines.gr', group: 'Short drive — 15 min or less', lat: 36.3713, lon: 25.4394, area: 'Pyrgos Kallistis', rank: 7,
     price: '€40 (4 wines) · €80 (6 + vineyard) · €160 (12)', dur: '45–60 min, appointment only',
     url: 'https://www.hatzidakiswines.gr/en/visit-us',
+    hours: 'by appointment only',
     priceSource: 'hatzidakiswines.gr, checked Aug 2026',
     tastings: [
-      { name: 'Guided tour + 4 wines', dur: 'appointment only', price: '€40' },
-      { name: 'Guided tour + 6 wines + vineyard', dur: 'appointment only', price: '€80' },
-      { name: 'Premium: 12 wines, older vintages', dur: 'appointment only', price: '€160' },
+      { name: 'Guided tour + 4 wines', price: '€40',
+        includes: 'Tour from the stainless-steel tanks to the barrel cave where the Vinsanto ages · 4 wines presented in detail · goat cheese from Naxos' },
+      { name: 'Guided tour + 6 wines + vineyard', price: '€80',
+        includes: 'Vineyard visit with their agronomist or oenologist on organic cultivation · full winery tour to the barrel cave · 6 wines' },
+      { name: 'Premium: 12 wines, older vintages', price: '€160',
+        includes: 'Private tour with an oenologist or sommelier · comparative tasting of 12 wines, old vintages and recent releases · vineyard and full winery tour' },
     ],
     note: 'Organic, carved into a cave under its own vineyard. First to revive Mavrotragano.',
     verdict: 'Great story and cellar, but it is expensive at €40 minimum and reviews split on short pours.', status: 'maybe' },
