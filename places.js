@@ -6,7 +6,7 @@
    One entry per place:
      name   required   what you'll recognise it by
      cat    required   one of the keys in CATS below (wine, dinner, snack,
-                       brekky, beach, bar, site, hike, sail, horse, stay). This order is also the
+                       brekky, beach, bar, site, hike, sail, stay). This order is also the
                        order sections appear in the app — rearrange it to reorder them.
      lat/lon required   decimal degrees. Right-click a spot in Google Maps and
                        the first menu item is "lat, lon" — paste it here.
@@ -36,7 +36,6 @@ const CATS = {
   site:   { label: 'Sites & indoor',  color: '#6C6497', shape: 'square'   },
   hike:   { label: 'Hiking & walks',  color: '#4E7C3F', shape: 'diamond'  },
   sail:   { label: 'Sailing',         color: '#3D6B87', shape: 'triangle' },
-  horse:  { label: 'Horseback riding', color: '#5B4A8A', shape: 'cross'    },
   stay:   { label: 'Where to stay',   color: '#54606B', shape: 'star'     },
 };
 
@@ -347,19 +346,6 @@ const PLACES = [
     note: 'Kypris\'s contemporary sculpture — the Frozen Fish, Shipwrecks and Cages & Flights series — plus etchings and jewellery. "Mati" means eye.',
     verdict: 'Open until 23:00 in August, in the same courtyard as Ouzeri. A walk-in after dinner, not a plan.' },
 
-  // ---- horseback riding ----
-  { name: 'Santorini Horse Riding', cat: 'horse', img: 'img/santorini-horse-riding.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · Alerove', type: 'stables, 45 horses', group: 'Walk from the base',
-    lat: 36.3770, lon: 25.4300, area: 'Megalochori', rank: 1,
-    price: 'from €20 (1 h) · beach ride €80 · ride with dinner €135',
-    dur: 'sunset rides are the ones people rate; book ahead',
-    url: 'https://santorini-horse-riding.com/about-us/',
-    note: 'Family stables in your own village, five generations and 45 horses. Rides to the black sand beach, vineyard routes, sunset and private options. Basic training given to beginners. Children 7+ ride alone, 4–6 share with a parent.',
-    verdict: 'In Megalochori, so it costs you no driving at all. The €80 beach ride at sunset is the one worth the money.' },
-  { name: 'Akrotiri Horse Riding', cat: 'horse', img: 'img/akrotiri-horse-riding.jpg', imgKind: 'area', imgFrom: 'area photo · Wikimedia · SANTORINI2017', type: 'stables', group: 'Short drive — 15 min or less',
-    lat: 36.3546, lon: 25.4052, area: 'Akrotiri', rank: 2,
-    dur: 'prices not published — call to ask',
-    note: 'The other mapped stables on the island, out on the Akrotiri side near the excavation and the red cliffs.',
-    verdict: 'Only worth it if you want the Akrotiri side specifically. Ring first, nothing is published.', status: 'maybe' },
 
   // ---- where to stay ----
   { name: 'Our Airbnb', cat: 'stay', img: 'img/base-megalochori.jpg', imgKind: 'satellite', imgFrom: 'satellite view', type: 'base',
