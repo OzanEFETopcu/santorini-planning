@@ -97,7 +97,7 @@ const PLACES = [
     note: '€40 = 4 wines with 4 designed bites. €30 = 1h cellar tour then 4 wines. Modern, small, close to Fira.',
     verdict: 'The best actual tasting — small groups, food thought through, no bus crowds.' },
   { name: 'Domaine Sigalas', cat: 'wine', img: 'img/domaine-sigalas.jpg', imgKind: 'venue', imgFrom: 'sigalas-wine.com', group: 'The north end — 25–30 min each way', lat: 36.4713, lon: 25.3943, area: 'Baxedes, near Oia', rank: 4,
-    price: 'from €12 · pairing menus €100–150', dur: 'tasting room 11:00–21:00. By bus: Fira–Oia line, off at the Perivolos Hotel stop, then ~25 min walk',
+    price: 'not published — both experiences are 1 h 30 food pairings', dur: 'tasting room 11:00–21:00. By bus: Fira–Oia line, off at the Perivolos Hotel stop, then ~25 min walk',
     url: 'https://sigalas-wine.com/food-pairing-en/',
     hours: 'tasting room 11:00–21:00, Mon–Sun',
     tastings: [
@@ -107,7 +107,7 @@ const PLACES = [
         includes: 'Flight of 5 of their best-selling wines from Cycladic varietals, each paired with a dish by their awarded chef · short guided walk in the nearby vineyard' },
     ],
     priceSource: 'programmes from sigalas-wine.com; prices not published — they sell through AnyRoad, so check the widget for your date',
-    note: 'Top-100 world winery listings, relaxed vineyard setting. Entry tastings are cheap; the 6-plate degustation is the splurge.',
+    note: 'Top-100 world winery listings, relaxed vineyard setting. Both published experiences are full wine-and-food pairings with a vineyard walk — no cheap pour advertised.',
     verdict: 'Most acclaimed wine, calm setting, and reachable without the car — bus to the Perivolos Hotel stop then walk 25 min. Pairs with an Oia or Ammoudi evening.' },
   { name: 'Estate Argyros', cat: 'wine', img: 'img/estate-argyros.webp', imgKind: 'venue', imgFrom: 'estateargyros.com', group: 'Short drive — 15 min or less', lat: 36.3836, lon: 25.4647, area: 'Episkopi Gonia', rank: 2,
     price: '€25 Welcome · €40 Taste the Real Santorini', dur: 'introductory tasting, or estate wines with regional bites',
