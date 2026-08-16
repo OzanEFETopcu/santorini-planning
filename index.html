@@ -525,6 +525,48 @@
 .leaflet-control-layers { background: var(--ivory); font-size: 13.5px; }
 .leaflet-control-attribution { font-size: 10.5px !important; background: rgba(255, 252, 245, 0.85) !important; }
 
+/* ===================== prices ===================== */
+.pw { margin-bottom: 30px; }
+
+.pw > h3 {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  margin: 0 0 3px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pw .rk-small {
+  font-family: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+
+.pw .where { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+
+.ptable { width: 100%; border-collapse: collapse; font-size: 15.5px; }
+.ptable th { text-align: left; font-family: var(--text); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0 12px 6px 0;
+  border-bottom: 1px solid var(--hair); }
+.ptable td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hair-soft, var(--hair)); vertical-align: top; }
+.ptable td:last-child, .ptable th:last-child { text-align: right; padding-right: 0; white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.ptable .nm { font-family: var(--display); font-weight: 500; font-variation-settings: "opsz" 24; }
+.ptable .dur { display: block; font-size: 13.5px; color: var(--muted); }
+.ptable .flag { display: block; font-size: 13px; color: var(--accent); }
+.ptable .amt { font-weight: 700; }
+
+.psrc { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.psrc.none { color: var(--accent); }
+
 /* ===================== to-do ===================== */
 .todo { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
 
@@ -665,6 +707,7 @@
     <button role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="false" tabindex="-1">Overview</button>
     <button role="tab" id="tab-days" aria-controls="panel-days" aria-selected="false" tabindex="-1">Days<span class="n">6</span></button>
     <button role="tab" id="tab-ideas" aria-controls="panel-ideas" aria-selected="false" tabindex="-1">Ideas<span class="n" id="tab-ideas-n"></span></button>
+    <button role="tab" id="tab-prices" aria-controls="panel-prices" aria-selected="false" tabindex="-1">Prices</button>
   </div>
 
   <!-- ==================== MAP ==================== -->
@@ -868,6 +911,14 @@
     <div id="ideas-groups"></div>
   </section>
 
+
+  <!-- ==================== PRICES ==================== -->
+  <section role="tabpanel" id="panel-prices" aria-labelledby="tab-prices" tabindex="0" hidden>
+    <p class="intro">What a tasting actually costs, taken from each winery's own site or booking page rather than
+      from review guides — those turned out to be wrong more often than right. Where a winery publishes nothing,
+      it says so instead of guessing.</p>
+    <div id="price-tables"></div>
+  </section>
 
 </div>
 
@@ -1221,8 +1272,31 @@
     paint();
   })();
 
+  function renderPrices() {
+    var wrap = document.getElementById('price-tables');
+    wrap.innerHTML = '';
+    PLACES.filter(function (p) { return p.cat === 'wine'; }).sort(byRank).forEach(function (p) {
+      var d = document.createElement('div');
+      d.className = 'pw';
+      var rows = (p.tastings || []).map(function (t) {
+        return '<tr><td><span class="nm">' + t.name + '</span>' +
+               (t.dur ? '<span class="dur">' + t.dur + '</span>' : '') +
+               (t.note ? '<span class="flag">' + t.note + '</span>' : '') +
+               '</td><td class="amt">' + t.price + '</td></tr>';
+      }).join('');
+      d.innerHTML =
+        '<h3><span class="rk-small">' + p.rank + '</span>' + p.name +
+        (p.url ? ' <a class="gmap" href="' + p.url + '" target="_blank" rel="noopener">site ↗</a>' : '') + '</h3>' +
+        '<p class="where">' + (p.area || '') + '</p>' +
+        (rows ? '<table class="ptable"><thead><tr><th>Tasting</th><th>Per person</th></tr></thead><tbody>' + rows + '</tbody></table>' : '') +
+        '<p class="psrc' + (rows ? '' : ' none') + '">' + (p.priceSource || 'no price information yet') + '</p>';
+      wrap.appendChild(d);
+    });
+  }
+
   renderMapSide();
   renderIdeas();
+  renderPrices();
   map.fitBounds([[36.330, 25.320], [36.475, 25.490]]);
 
   var start = tabs.filter(function (t) { return t.id === 'tab-' + location.hash.slice(1); })[0];
